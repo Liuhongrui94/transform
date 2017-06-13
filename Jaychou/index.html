@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Jay chou</title>
+</head>
+<style type="text/css">
+	body,article,section{
+		margin:0;padding: 0;
+	}
+	body{
+		background: black;
+	}
+	.island {
+		width: 140px;height: 190px;
+		perspective: 1200px;
+		margin: 100px auto;
+	}
+	.island>section{
+		width: inherit;height: inherit;
+		transform-style: preserve-3d;
+		position: relative;
+	}
+
+	.island>section>img{
+		position: absolute;
+	}
+
+
+	.island>section>img:nth-child(1){
+		transform: rotateY(0deg) translateZ(calc(192px + 40px));
+	}
+	.island>section>img:nth-child(2){
+		transform: rotateY(40deg) translateZ(calc(192px + 40px));
+	}
+	.island>section>img:nth-child(3){
+		transform: rotateY(80deg) translateZ(calc(192px + 40px));
+	}
+	.island>section>img:nth-child(4){
+		transform: rotateY(120deg) translateZ(calc(192px + 40px));
+	}
+	.island>section>img:nth-child(5){
+		transform: rotateY(160deg) translateZ(calc(192px + 40px));
+	}
+	.island>section>img:nth-child(6){
+		transform: rotateY(200deg) translateZ(calc(192px + 40px));
+	}
+	.island>section>img:nth-child(7){
+		transform: rotateY(240deg) translateZ(calc(192px + 40px));
+	}
+	.island>section>img:nth-child(8){
+		transform: rotateY(280deg) translateZ(calc(192px + 40px));
+	}
+	.island>section>img:nth-child(9){
+		transform: rotateY(320deg) translateZ(calc(192px + 40px));
+	}
+   @keyframes animation-muma{
+   	from{transform: rotateY(0deg)}
+   	to{transform: rotateY(-360deg)}
+   }
+	.island>section{
+   	animation: animation-muma 5s linear infinite;
+   }
+	.island>section:hover{
+   	animation-play-state: paused;
+   }
+
+	.island>section>img:hover{
+   	box-shadow: 2px 2px 15px gold;
+   }
+</style>
+<body>
+	<article class="island">
+		<section>
+			<img src="image/1.jpeg" alt="">
+			<img src="image/2.jpeg" alt="">
+			<img src="image/3.jpeg" alt="">
+			<img src="image/4.jpeg" alt="">
+			<img src="image/5.jpeg" alt="">
+			<img src="image/6.jpeg" alt="">
+			<img src="image/7.jpeg" alt="">
+			<img src="image/8.jpeg" alt="">
+			<img src="image/9.jpeg" alt="">
+
+		</section>
+	</article>
+</body>
+</html>
