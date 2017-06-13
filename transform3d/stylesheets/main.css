@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+body{
+	background: #000;
+}
+
+/*练习一*/
+
+div.stage1{
+	width: 300px;
+	height: 300px;
+	margin: 300px auto;
+	perspective:0px;
+}
+
+div.stage1 .wrap{
+	width: inherit;
+	height: inherit;
+	position: relative;
+	transform-style: preserve-3d;
+	animation: rotote-animation 10s linear infinite;
+}
+
+
+div.stage1 .wrap .face{
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	opacity: 1;
+}
+/*前面*/
+.face1{
+	background-image: url("../image/sandbeach1.jpg");
+	transform: translateZ(150px);
+	box-shadow: 0 0 25px #9370DB;
+}
+/*后面*/
+.face2{
+	background-image: url("../image/sandbeach2.jpg");
+	transform:rotateY(180deg) translateZ(150px);
+	box-shadow: 0 0 25px #9370DB;
+}
+/*上面*/
+.face3{
+	background-image: url("../image/sandbeach3.jpg");
+	transform: rotateX(90deg) translateZ(150px);
+	box-shadow: 0 0 25px #9370DB;
+}
+/*下面*/
+.face4{
+	background-image: url("../image/sandbeach4.jpg");
+	transform: rotateX(-90deg) translateZ(150px);
+	box-shadow: 0 0 25px #9370DB;
+}
+/*左面*/
+.face5{
+	background-image: url("../image/sandbeach5.jpg");
+	transform: rotateY(90deg) translateZ(150px);
+	box-shadow: 0 0 25px #9370DB;
+}
+/*右面*/
+.face6{
+	background-image: url("../image/sandbeach6.jpg");
+	transform: rotateY(-90deg) translateZ(150px);
+	box-shadow: 0 0 25px #9370DB;
+}
+
+@keyframes rotote-animation{
+	from{
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	to{
+		transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+	}
+}
